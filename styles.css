@@ -1,6 +1,6 @@
 
 /* Styles for screens up to 768 pixels wide */
-@media (max-width: 768px) {
+@media (max-width: 3in) {
     /* CSS rules for smaller screens */
     .background {
         position: fixed;
@@ -159,7 +159,7 @@
   
   
   /* Styles for screens larger than 1200 pixels wide */
-  @media (min-width: 1200px) {
+  @media (min-width: 1000px) {
     /* CSS rules for larger screens */
     .background {
         position: fixed;
