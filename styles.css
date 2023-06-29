@@ -1,4 +1,4 @@
-
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 /* Styles for screens up to 768 pixels wide */
     .background {
         position: fixed;
@@ -26,15 +26,38 @@
     
     .name {
         font-size: 50px;
-        font-family : monospace;
-        color : #99E6D4;
-        margin-bottom: 20px;
+        font-family: 'Anonymous Pro', monospace;
+        color: #99E6D4;
+        margin: 0 auto;
+        text-align: center;
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typewriter 4s steps(40) 1s 1 normal both;
+        animation-fill-mode: forwards;
     }
     
+    
+.name::after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 2px;
+    height: 1em;
+    margin-left: 4px;
+    background-color: #0B192D;
+    animation: blinkCursor 1s infinite;
+}
+
+
+
     .title {
         font-size: 25px;
         color: #CED7F3;
         font-family: monospace;
+        margin-left: 5in;
+        text-align: center;
+        opacity: 0;
+        animation: typewriter 4s steps(40) 1s 1 normal both, fadeIn 1s 5s ease-in-out forwards;
     
     }
     .button {
@@ -152,4 +175,31 @@
     .project-link:hover {
         color: #ffc107;
     }
-  
+
+/* Animation */
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 16em;
+    }
+}
+
+@keyframes blinkCursor {
+    from, to {
+        background-color: transparent;
+    }
+    50% {
+        background-color: #99E6D4;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
