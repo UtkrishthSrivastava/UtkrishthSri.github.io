@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
-/* Styles for screens up to 768 pixels wide */
     .background {
         position: fixed;
         top: 0;
@@ -9,7 +8,11 @@
         background-image: linear-gradient(to bottom, #0B192D, #0B192D);
         z-index: -1;
     }
-    
+
+    .rounded-image {
+        border-radius: 10px;
+      }
+
     .container {
         display: flex;
         flex-direction: column;
@@ -105,6 +108,8 @@
     
     .goal{
         font-size: 20px;
+        margin-left: 1in;
+
         color: #CED7F3;
         font-family: monospace;
     }
@@ -116,17 +121,21 @@
     }
     .about-me {
         margin-top: 30px;
+        margin-left: 1in;
+
         font-family: monospace;
         font-size: 25px;
+        word-wrap: break-word;
         color: #CED7F3;
         text-align: middle;
+        animation: fade-in2 4s steps(40) 4s 1 normal both
     }
     
+    
     .line {
-        width: 1200px;
+        width: 100%;
         height: 2px;
         background-color: #7e6f71;
-    
         margin: 20px auto;
     }
     
@@ -204,3 +213,19 @@
         opacity: 1;
     }
 }
+
+@keyframes fade-in2 {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .about-me.animating {
+    animation-play-state: running;
+  }
+
