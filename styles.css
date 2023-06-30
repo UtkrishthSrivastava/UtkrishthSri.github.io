@@ -1,3 +1,19 @@
+/* Default styles */
+body {
+    width: 100%; /* Use the full width of the viewport */
+    height: 100%; /* Use the full height of the viewport */
+  }
+  
+  /* Styles for screens narrower than 600px */
+  @media (max-width: 600px) {
+    body {
+      width: auto; /* Allow the content to wrap */
+      height: auto; /* Allow the content to expand vertically */
+    }
+  }
+
+
+
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
     .background {
         position: fixed;
