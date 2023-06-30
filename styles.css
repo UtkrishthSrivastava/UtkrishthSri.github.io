@@ -69,11 +69,11 @@
         background-color: #0B192D;
         color: #CED7F3;
         padding: 10px 20px;
-        border-radius: 20px;
+        border-radius: 10px;
         text-decoration: none;
         margin-top: 20px;
         font-family: monospace;
-        font-size: 14px;
+        font-size: 25px;
         border: 1px solid;
         transition: background-color 0.3s;
     }
