@@ -1,234 +1,237 @@
-
-
-
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
-    .background {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: linear-gradient(to bottom, #0B192D, #0B192D);
-        z-index: -1;
-    }
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, #0B192D, #0B192D);
+    z-index: -1;
+}
 
-    .rounded-image {
-        border-radius: 10px;
-      }
+.rounded-image {
+    border-radius: 10px;
+  }
 
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-    
-    
-    }
-    
-    .header {
-        text-align: center;
-    }
-    
-    .name {
-        margin-top: 3cm;
-        font-size: 50px;
-        font-family: monospace;
-        color: #99E6D4;
-        margin: 0 auto;
-        text-align: center;
-        overflow: hidden;
-        white-space: nowrap;
-        animation: typewriter 4s steps(40) 1s 1 normal both;
-        animation-fill-mode: forwards;
-    }
-    
-    
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+    height: 100vh;
+
+
+}
+.h3{
+    align-self: center;
+}
+.header {
+    text-align: center;
+}
+
+.name {
+    margin-top: 3cm;
+    font-size: 50px;
+    font-family: monospace;
+    color: #99E6D4;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typewriter 4s steps(40) 1s 1 normal both;
+    animation-fill-mode: forwards;
+}
+
+
 .name::after {
-    content: '';
-    display: inline-block;
-    vertical-align: middle;
-    width: 2px;
-    height: 1em;
-    margin-left: 4px;
-    background-color: #0B192D;
-    animation: blinkCursor 1s infinite;
+content: '';
+display: inline-block;
+vertical-align: middle;
+width: 2px;
+height: 1em;
+margin-left: 4px;
+background-color: #0B192D;
+animation: blinkCursor 1s infinite;
 }
 
 
 
-    .title {
-        font-size: 25px;
-        color: #CED7F3;
-        font-family: monospace;
-        margin-left: 5in;
-        text-align: center;
-        opacity: 0;
-        animation: typewriter 4s steps(40) 1s 1 normal both, fadeIn 1s 5s ease-in-out forwards;
-    
-    }
-    .button {
-        display: inline-block;
-        background-color: #0B192D;
-        color: #CED7F3;
-        padding: 10px 20px;
-        border-radius: 10px;
-        text-decoration: none;
-        margin-top: 20px;
-        font-family: monospace;
-        font-size: 25px;
-        border: 1px solid;
-        transition: background-color 0.3s;
-    }
-    .button2 {
-        display: inline-block;
-        width: 2in;
-        height: 2.5in;
-        padding: 10px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        background-color: #233453;
-        color: #99E6D4;
-        border-radius: 10px;
-        text-align: center;
-        text-decoration: none;
-        font-size: 25px;
-        cursor: pointer;
-        margin-right: 10px;
-        transition: transform .2s;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow */
-    }
-    .button:hover {
-        background-color: #7e6f71;
-    }
-    
-    
-    .button2:hover {
-        background-color: #223250;
-        transform: scale(1.1); /* (150% zoom) */
-    }
-    
-    .goal{
-        font-size: 20px;
-        margin-left: 1in;
+.title {
+    font-size: 25px;
+    color: #CED7F3;
+    font-family: monospace;
+    margin-left: 5in;
+    text-align: center;
+    opacity: 0;
+    animation: typewriter 4s steps(40) 1s 1 normal both, fadeIn 1s 5s ease-in-out forwards;
 
-        color: #CED7F3;
-        font-family: monospace;
-    }
-    .content {
-        margin-top: 50px;
-        text-align: center;
-        color: #CED7F3;
-        font-family: monospace;
-    }
-    .about-me {
-        margin-top: 30px;
-        margin-left: 1in;
+}
+.button {
+    display: inline-block;
+    background-color: #0B192D;
+    color: #CED7F3;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-top: 20px;
+    font-family: monospace;
+    font-size: 25px;
+    border: 1px solid;
+    transition: background-color 0.3s;
+}
+.button2 {
+    display: inline-block;
+    width: 2in;
+    height: 2.5in;
+    padding: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: #233453;
+    color: #99E6D4;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: transform .2s;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow */
+}
+.button:hover {
+    background-color: #7e6f71;
+}
 
-        font-family: monospace;
-        font-size: 25px;
-        word-wrap: break-word;
-        color: #CED7F3;
-        text-align: middle;
-        animation: fade-in2 4s steps(40) 4s 1 normal both
-    }
-    
-    
-    .line {
-        width: 100%;
-        height: 2px;
-        background-color: #7e6f71;
-        margin: 20px auto;
-    }
-    
-    pg {
-        font-family: monospace;
-        font-size: 15pt;
-        width: 50%;
-        padding-left: 0.5in;
-        float: left;
-        line-height: 1.5;
-        text-align: left;
-        margin: 1;
-    }
-    .section-heading {
-        font-size: 30px;
-        font-family: monospace;
-    }
-    
-    .projects {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-family: monospace;
-        color: #CED7F3;
-        margin-top: 20px;
-    }
-    
-    .project {
-        margin-bottom: 20px;
-        color: #CED7F3;
-        font-family: monospace;
-    }
-    
-    .project-title {
-        font-size: 25px;
-        margin-bottom: 10px;
-        font-family: monospace;
-    }
-    
-    .project-link {
-        color: #CED7F3;
-        text-decoration: none;
-        font-family: monospace;
-        font-size: 20px;
-    }
-    
-    .project-link:hover {
-        color: #ffc107;
-    }
+
+.button2:hover {
+    background-color: #223250;
+    transform: scale(1.1); /* (150% zoom) */
+}
+
+.goal{
+    font-size: 20px;
+    margin-left: 1in;
+
+    color: #CED7F3;
+    font-family: monospace;
+}
+.content {
+    margin-top: 50px;
+    text-align: center;
+    color: #CED7F3;
+    font-family: monospace;
+}
+.about-me {
+    margin-top: 30px;
+    margin-left: 1in;
+
+    font-family: monospace;
+    font-size: 25px;
+    word-wrap: break-word;
+    color: #CED7F3;
+    text-align: middle;
+    animation: fade-in2 4s steps(40) 4s 1 normal both
+}
+
+
+.line {
+    width: 1200px;
+    height: 2px;
+    background-color: #7e6f71;
+    margin: 20px auto;
+}
+
+pg {
+    font-family: monospace;
+    font-size: 15pt;
+    width: 50%;
+    padding-left: 0.5in;
+    float: left;
+    line-height: 1.5;
+    text-align: left;
+    margin: 1;
+}
+.section-heading {
+    margin-top: 3cm;
+    margin-right: 1in;
+    align-self: center;
+    font-size: 30px;
+    font-family: monospace;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: monospace;
+    color: #CED7F3;
+    margin-top: 20px;
+}
+
+.project {
+    margin-bottom: 20px;
+    color: #CED7F3;
+    font-family: monospace;
+}
+
+.project-title {
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-family: monospace;
+}
+
+.project-link {
+    color: #CED7F3;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 20px;
+}
+
+.project-link:hover {
+    color: #ffc107;
+}
 
 /* Animation */
 @keyframes typewriter {
-    from {
-        width: 0;
-    }
-    to {
-        width: 16em;
-    }
+from {
+    width: 0;
+}
+to {
+    width: 16em;
+}
 }
 
 @keyframes blinkCursor {
-    from, to {
-        background-color: transparent;
-    }
-    50% {
-        background-color: #99E6D4;
-    }
+from, to {
+    background-color: transparent;
+}
+50% {
+    background-color: #99E6D4;
+}
 }
 
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
 }
 
 @keyframes fade-in2 {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .about-me.animating {
-    animation-play-state: running;
-  }
+0% {
+  opacity: 0;
+  transform: translateY(20px);
+}
+100% {
+  opacity: 1;
+  transform: translateY(0);
+}
+}
+
+.about-me.animating {
+animation-play-state: running;
+}
 
