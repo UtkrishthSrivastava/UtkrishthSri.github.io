@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
     <div class="background"></div>
     <div class="container">
-            <img src="download.png" alt="Logo" id="logo" style="padding-top: 8in;">
+            <img src="download.png" alt="Logo" id="logo" style="padding-top: 12in;">
         
         <div class="header">
             <h1 class="name">Hi, Utkrishth here...</h1>
@@ -33,9 +36,50 @@
                 </div>
             </div>
         </div>
+        <div class="photo-frame">
+            <img id="photo" src="photo1.jpg" alt="Photo">
+          </div>
+        
+          <div class="button-container">
+            <button id="customPreviousBtn"><</button>
+            <button id="customNextBtn">></button>
+          </div>
     </div>
 </body>
 
+<script>
+    const photoUrls = [
+      "photo1.jpg",
+      "photo2.jpg",
+      // Add more photo URLs here
+    ];
+
+    let currentPhotoIndex = 0;
+
+    const photoElement = document.getElementById("photo");
+    const customPreviousBtn = document.getElementById("customPreviousBtn");
+    const customNextBtn = document.getElementById("customNextBtn");
+
+    function updatePhoto() {
+      photoElement.src = photoUrls[currentPhotoIndex];
+    }
+
+    function previousPhoto() {
+      currentPhotoIndex = (currentPhotoIndex - 1 + photoUrls.length) % photoUrls.length;
+      updatePhoto();
+    }
+
+    function nextPhoto() {
+      currentPhotoIndex = (currentPhotoIndex + 1) % photoUrls.length;
+      updatePhoto();
+    }
+
+    // Use your custom button IDs for event handling
+    customPreviousBtn.addEventListener("click", previousPhoto);
+    customNextBtn.addEventListener("click", nextPhoto);
+
+    updatePhoto();
+</script>
 <footer style="font-size: 12px;">
     <p>Built and designed by Utkrishth Srivastava</p>
     <p>All Rights Reserved</p>

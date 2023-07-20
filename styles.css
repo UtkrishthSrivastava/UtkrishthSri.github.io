@@ -33,7 +33,7 @@
 .name {
     margin-top: 3cm;
     font-size: 50px;
-    font-family: monospace;
+    font-family: 'Maven Pro', sans-serif;
     color: #99E6D4;
     margin: 0 auto;
     text-align: center;
@@ -45,6 +45,7 @@
 
 
 .name::after {
+opacity: 100;
 content: '';
 display: inline-block;
 vertical-align: middle;
@@ -191,7 +192,41 @@ pg {
 .project-link:hover {
     color: #ffc107;
 }
+.photo-frame {
+    border: 5px solid #99E6D4;
+    width: 400px;
+    border-radius: 10px;
+    height: 300px;
+    margin: 30px auto;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
 
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #0B192D;
+    border-color: #99E6D4;
+    color: #99E6D4;
+    border-width: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
 /* Animation */
 @keyframes typewriter {
 from {
