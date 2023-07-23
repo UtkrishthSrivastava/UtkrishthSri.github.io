@@ -88,10 +88,10 @@ animation: blinkCursor 1s infinite;
     font-family: myFirstFont;
     src: url(NTR-Regular.ttf);
  }
-.button2 {
+.project-tile {
     display: inline-block;
-    width: 2in;
-    height: 2.5in;
+    width: 2.5in;
+    height: 3.5in;
     padding: 10px;
     white-space: nowrap;
     overflow: hidden;
@@ -111,10 +111,9 @@ animation: blinkCursor 1s infinite;
     background-color: #7e6f71;
 }
 
-
-.button2:hover {
+.project-tile:hover {
     background-color: #223250;
-    transform: scale(1.1); /* (150% zoom) */
+    transform: scale(1.07); /* (150% zoom) */
 }
 
 .goal{
