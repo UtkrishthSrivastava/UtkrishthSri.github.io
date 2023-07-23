@@ -9,8 +9,9 @@
     z-index: -1;
 }
 
-.rounded-image {
+.rounded-image1 {
     border-radius: 10px;
+    align-self: auto;
   }
 
 .container {
@@ -25,6 +26,8 @@
 }
 .h3{
     align-self: center;
+    font-size: large;
+    color: #60FFD9;
 }
 .header {
     text-align: center;
@@ -34,7 +37,7 @@
     margin-top: 3cm;
     font-size: 50px;
     font-family: 'Maven Pro', sans-serif;
-    color: #99E6D4;
+    color: #60FFD9;
     margin: 0 auto;
     text-align: center;
     overflow: hidden;
@@ -61,8 +64,8 @@ animation: blinkCursor 1s infinite;
 .title {
     font-size: 25px;
     color: #CED7F3;
-    font-family: monospace;
-    margin-left: 5in;
+    font-family: myFirstFont;
+    margin-left: 4.75in;
     text-align: center;
     opacity: 0;
     animation: typewriter 4s steps(40) 1s 1 normal both, fadeIn 1s 5s ease-in-out forwards;
@@ -76,11 +79,15 @@ animation: blinkCursor 1s infinite;
     border-radius: 10px;
     text-decoration: none;
     margin-top: 20px;
-    font-family: monospace;
-    font-size: 25px;
+    font-family: myFirstFont;
+    font-size: 20px;
     border: 1px solid;
     transition: background-color 0.3s;
 }
+@font-face {
+    font-family: myFirstFont;
+    src: url(NTR-Regular.ttf);
+ }
 .button2 {
     display: inline-block;
     width: 2in;
@@ -89,8 +96,8 @@ animation: blinkCursor 1s infinite;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    background-color: #233453;
-    color: #99E6D4;
+    background-color: #0E1B33;
+    color: #60FFD9;
     border-radius: 10px;
     text-align: center;
     text-decoration: none;
@@ -111,23 +118,23 @@ animation: blinkCursor 1s infinite;
 }
 
 .goal{
-    font-size: 20px;
+    font-size: 25px;
     margin-left: 1in;
 
     color: #CED7F3;
-    font-family: monospace;
+    font-family: myFirstFont;
 }
 .content {
     margin-top: 50px;
     text-align: center;
     color: #CED7F3;
-    font-family: monospace;
+    font-family: myFirstFont;
 }
 .about-me {
     margin-top: 30px;
     margin-left: 1in;
 
-    font-family: monospace;
+    font-family: myFirstFont;
     font-size: 25px;
     word-wrap: break-word;
     color: #CED7F3;
@@ -144,7 +151,7 @@ animation: blinkCursor 1s infinite;
 }
 
 pg {
-    font-family: monospace;
+    font-family: myFirstFont;
     font-size: 15pt;
     width: 50%;
     padding-left: 0.5in;
@@ -158,14 +165,14 @@ pg {
     margin-right: 1in;
     align-self: center;
     font-size: 30px;
-    font-family: monospace;
+    font-family: myFirstFont;
 }
 
 .projects {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: monospace;
+    font-family: myFirstFont;
     color: #CED7F3;
     margin-top: 20px;
 }
@@ -173,19 +180,19 @@ pg {
 .project {
     margin-bottom: 20px;
     color: #CED7F3;
-    font-family: monospace;
+    font-family: myFirstFont;
 }
 
 .project-title {
     font-size: 25px;
     margin-bottom: 10px;
-    font-family: monospace;
+    font-family: myFirstFont;
 }
 
 .project-link {
     color: #CED7F3;
     text-decoration: none;
-    font-family: monospace;
+    font-family: myFirstFont;
     font-size: 20px;
 }
 
@@ -227,8 +234,39 @@ pg {
     font-size: 16px;
     cursor: pointer;
   }
+/* Remove the default circle bullet point */
+.neon-triangle-list {
+    list-style-type: none;
+}
+
+/* Define the style for the neon triangle */
+.neon-triangle-list li::before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 12px solid #00FFFF; /* Neon Cyan color, you can change this to any other neon color */
+    margin-right: 10px;
+    vertical-align: middle;
+    animation: neon-glow 1s infinite;
+}
 /* Animation */
-@keyframes typewriter {
+@keyframes neon-glow {
+    0%, 100% {
+        opacity: 0.8;
+        text-shadow: 0 0 10px #00FFFF;/* Neon Cyan color, should match the border-bottom color */
+    }
+    50% {
+        opacity: 1;
+        text-shadow: none;
+    }
+}
+
+
+
+  @keyframes typewriter {
 from {
     width: 0;
 }
