@@ -8,12 +8,34 @@
     background-image: linear-gradient(to bottom, #0B192D, #0B192D);
     z-index: -1;
 }
+.rounded-image1{
+    border-radius: 20px;
+}
 
-.rounded-image1 {
-    border-radius: 10px;
-    align-self: auto;
-  }
+        .ribbon {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            box-shadow: #03060B;            ;
+            right: 0;
+            background-color: #223250; /* Choose your desired background color */
+            color: #ffffff; /* Choose your desired text color */
+            padding: 10px;
+            z-index: 9999; /* Set a high z-index to make sure the ribbon appears above other content */
+            text-align: right; /* Align the buttons to the right within the ribbon */
+        }
 
+        /* Styling for the buttons */
+        .ribbon-button {
+            color: #90FFFF; /* Choose your desired text color for buttons */
+            border: none;
+            font-family: monospace;
+            font-size: small;
+            border-radius: 4px;
+            padding: 5px 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
 .container {
     display: flex;
     flex-direction: column;
