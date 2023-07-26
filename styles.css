@@ -316,7 +316,7 @@ from, to {
 animation-play-state: running;
 }
 }
-@media (max-width: 767px) {
+@media (max-width: 400px) {
     /* Add mobile-specific styles here */
     .background {
         position: fixed;
