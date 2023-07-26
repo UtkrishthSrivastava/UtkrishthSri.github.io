@@ -363,7 +363,7 @@ animation-play-state: running;
                 margin-top: 20in;
                 display: flex;
                 flex-direction: column;
-                align-items: center;
+                align-items: justify;
                 flex-grow: 1;
                 justify-content: center;
                 height: 100vh;}
@@ -377,15 +377,13 @@ animation-play-state: running;
     }
     .name {
         margin-top: 3cm;
-        font-size: 50px;
+        font-size: 40px;
         font-family: 'Maven Pro', sans-serif;
         color: #60FFD9;
         margin: 0 auto;
         text-align: center;
         overflow: hidden;
         white-space: nowrap;
-        animation: typewriter 4s steps(40) 1s 1 normal both;
-        animation-fill-mode: forwards;
     }
     .name::after {
         opacity: 100;
@@ -402,11 +400,6 @@ animation-play-state: running;
             font-size: 30px;
             color: #CED7F3;
             font-family: myFirstFont;
-            margin-left: 30%;
-            text-align: center;
-            opacity: 0;
-            animation: typewriter 4s steps(40) 1s 1 normal both, fadeIn 1s 5s ease-in-out forwards;
-        
         }
         pg {
             font-family: myFirstFont;
@@ -419,7 +412,7 @@ animation-play-state: running;
         }
         .button {
             display: inline-block;
-            width: 40%;
+            width: 30%;
             height: 30%;
             background-color: #0B192D;
             color: #CED7F3;
@@ -428,7 +421,7 @@ animation-play-state: running;
             text-decoration: none;
             margin-top: 20px;
             font-family: myFirstFont;
-            font-size: 50px;
+            font-size: 30px;
             border: 1px solid;
             transition: background-color 0.3s;
         }
@@ -498,6 +491,7 @@ animation-play-state: running;
         border-right: 6px solid transparent;
         border-bottom: 12px solid #00FFFF; /* Neon Cyan color, you can change this to any other neon color */
         margin-right: 10px;
+        font-size: 18px;
         vertical-align: middle;
         animation: neon-glow 1s infinite;
     }
