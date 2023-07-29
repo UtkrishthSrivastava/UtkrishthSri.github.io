@@ -19,7 +19,7 @@
             position: fixed;
             width: 100%;
             top: 0;
-            box-shadow: #03060B;            ;
+            box-shadow: #03060B;
             right: 0;
             background-color: #223250; /* Choose your desired background color */
             color: #ffffff; /* Choose your desired text color */
@@ -30,6 +30,8 @@
 
         /* Styling for the buttons */
         .ribbon-button {
+            text-decoration: none;
+            background-color: #0B192D;
             color: #90FFFF; /* Choose your desired text color for buttons */
             border: none;
             font-family: monospace;
@@ -352,11 +354,13 @@ animation-play-state: running;
     .ribbon-button {
                 color: #90FFFF; /* Choose your desired text color for buttons */
                 border: none;
+                text-decoration: none;
                 font-family: monospace;
-                font-size: x-large;
+                font-size: small;
                 background-color: #223250;
                 border-radius: 4px;
                 padding: 5px 10px;
+                margin-left: 0.2%;
                 margin: 5px;
                 cursor: pointer;
                 }
