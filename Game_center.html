@@ -3,150 +3,93 @@
 <head>
   <title>Game Center</title>
   <style>
-    /* CSS for the left pane */
+    @font-face {
+      font-family: myFont;
+      src: url(NTR-Regular.ttf);
+    }
     body {
-      background-image: linear-gradient(to bottom, #203385, #152A7C);
+      font-family: monospace;
+      background-color: #f2f2f2;
       margin: 0;
-      color: #FDFEFF;
-      font-family: "Helvetica", Arial, sans-serif;
+      padding: 0;
+      background-image: linear-gradient(to bottom, #803e08, #881414);
     }
-    h1 {color: #FDFEFF;
-        padding: 10px;
-        margin-left: 1cm;
-        text-shadow: #000;
-        font-size: 20px;}
-    h2 {color: #FDFEFF;
-        padding: 1px;
-        text-shadow: #000;
-        margin-left: 30%;
-        font-size: 30px;}
-    .left-pane {
-      width: 30%;
-      height: 100vh;
-      background-color: #152A7C;
-      position: fixed;
-      left: 0;
-      top: 0;
+    h1 {margin-left: 35%;
+       font-family: myFont;
+       color: cyan;
+       font-size: 75px;}
+    
+    .game-center{
+      max-width: 800px;
+      margin: auto;
+      margin-top: 0%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+      border-top: none;
+      border-bottom: none;
     }
-
-    .tab {
-      padding: 10px;
-      border-radius: 10px;
-      opacity: 50%;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .tab.active {
-      background-color: #4e7ab4;
-      color: #fff;
-    }
-
-    /* CSS for the game center */
-    .game-center {
-      margin-left: 25%; /* Account for the width of the left pane */
-      padding-left: 20px;
-      margin-top: 1px;
-    }
-
-    .game-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      margin-top: 50px;
-      margin-left: 15px;
-    }
-
-    .game-card {
-      width: 200px;
-      height: 200px;
+    
+    .game-tile {
+      background-color: #fff;
       border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 10px;
-      margin: 10px;
+      padding: 20px;
       text-align: center;
-      transition: transform 0.3s;
-      background-color: rgba(78, 122, 180, 0.7); /* Translucent background */
-      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     }
-    button{background-color: rgba(78, 122, 180, 0.7);
-    border-color: #888;
-    border-radius: 8px;}
-    .game-card:hover {
-      transform: scale(1.05);
+    
+    .game-tile img {
+      border-radius: 10px;
+      max-width: 80px;
+      margin: 10px auto;
+      display: block;
     }
-
-    .game-title {
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 10px;
+    
+    .game-tile h2 {
+      font-size: 24px;
+      margin: 10px 0;
     }
-
-    .game-description {
+    
+    .game-tile p {
       font-size: 14px;
-      color: #888;
+      margin: 0;
+    }
+    
+    .game-tile a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 20px;
+      background-color: #007BFF;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    
+    .game-tile a:hover {
+      background-color: #0056b3;
     }
   </style>
 </head>
 <body>
-  <div class="left-pane">
-    <h1>Game center</h1>
-    <div class="tab active" id="pc-tab">PC</div>
-
-    <div class="tab" id="mobile-tab">Mobile</div>
-  </div>
-
+  <h1>Game Center</h1>
   <div class="game-center">
-    <h2>Available Games</h2>
-    <div class="game-container">
-      <div class="game-card">
-        <h3 class="game-title">Menja</h3>
-        <p class="game-description">Cut Blocks, Have Fun...</p>
-        <a href="menja.html">
-        <button>Play</button>
-    </a>
-      </div>
-
-      <div class="game-card">
-        <h3 class="game-title">Neon Snake</h3>
-        <p class="game-description">Embrace the Lighting...</p>
-        <a href="snake.html">
-            <button>Play</button>
-        </a>
-      </div>
-      <div class="game-card">
-        <h3 class="game-title">A-Maze-ing</h3>
-        <p class="game-description">Amazed by the Maze</p>
-        <a href="maze.htm">
-            <button>Play</button>
-        </a>
-      </div>
-      <div class="game-card">
-        <h3 class="game-title">Game 4</h3>
-        <p class="game-description">Coming Soon</p>
-        <button>Play</button>
-      </div>
+    <div class="game-tile">
+      <h2>Menja</h2>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKPzXKz558UezUVkuju-dPQPXecLmGk1PibMDoWR_6-f3zOpwgCMJE&usqp=CAE&s" alt="Game 1 Thumbnail">
+      <p>Slice blocks, Have fun.</p>
+      <a href="menja.html">Play Now</a>
+    </div>
+    <div class="game-tile">
+      <h2>Neon snake</h2>
+      <img src="https://cdn.vectorstock.com/i/preview-1x/50/56/snake-in-zoo-neon-glow-icon-vector-46245056.webp" alt="Game 2 Thumbnail">
+      <p>embrace the lights...</p>
+      <a href="snake.html">Play Now</a>
+    </div>
+    <div class="game-tile">
+      <h2>A-mazed</h2>
+      <img src="maze.png" alt="Game 3 Thumbnail">
+      <p>Have fun with the amazing maze</p>
+      <a href="maze.htm">Play Now</a>
     </div>
   </div>
-
-  <script>
-    // JavaScript to handle tab switching
-    const pcTab = document.getElementById('pc-tab');
-    const mobileTab = document.getElementById('mobile-tab');
-    const gameCenter = document.querySelector('.game-center');
-
-    pcTab.addEventListener('click', () => {
-      pcTab.classList.add('active');
-      mobileTab.classList.remove('active');
-      gameCenter.style.marginLeft = '200px';
-    });
-
-    mobileTab.addEventListener('click', () => {
-      mobileTab.classList.add('active');
-      pcTab.classList.remove('active');
-      gameCenter.style.marginLeft = '200px';
-    });
-  </script>
 </body>
 </html>
