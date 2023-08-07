@@ -10,173 +10,314 @@
 
   gtag('config', 'G-MLKRQ25D15');
 </script>
-  <title>Game Center</title>
-	<link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkDjOy8yY5VhNEDJVmq_x6gDk9xDLgsGBwp-sLX1oQx2M9gbBq2twh&usqp=CAE&s">
-  <style>
-    @font-face {
-      font-family: myFont;
-      src: url(NTR-Regular.ttf);
-    }
-    @media (min-width: 768px) {
-    body {
-      font-family: monospace;
-      background-color: #f2f2f2;
-      margin: 0;
-      padding: 0;
-      background-image: linear-gradient(to bottom, #803e08, #881414);
-    }
-    h1 {margin-left: 35%;
-       font-family: myFont;
-       color: cyan;
-       font-size: 75px;}
-    
-    .game-center{
-      max-width: 800px;
-      margin: auto;
-      margin-top: 0%;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 20px;
-      border-top: none;
-      border-bottom: none;
-    }
-    
-    .game-tile {
-      background-color: #fff;
-      border: 1px solid #ccc;
-      padding: 20px;
-      width: 90%;
-      padding: 20px;
-      height: max-content;
-      text-align: center;
-    }
-    
-    .game-tile img {
-      border-radius: 10px;
-      max-width: 80px;
-      margin: 10px auto;
-      display: block;
-    }
-    
-    .game-tile h2 {
-      font-size: 24px;
-      margin: 10px 0;
-    }
-    
-    .game-tile p {
-      font-size: 14px;
-      margin: 0;
-    }
-    
-    .game-tile a {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 20px;
-      background-color: #007BFF;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    .game-tile-pc {display: inline-block;
-      margin-top: 10px;
-      padding: 8px 20px;
-      background-color: #007BFF;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;}
-    .game-tile a:hover {
-      background-color: #0056b3;
-    }
-  }
-  @media (max-width: 800px) {
-    /* Add mobile-specific styles here */
-    body {
-      font-family: monospace;
-      background-color: #f2f2f2;
-      margin: 0;
-      padding: 0;
-      background-image: linear-gradient(to bottom, #803e08, #881414);
-    }
-    h1 {margin-left: 35%;
-       font-family: myFont;
-       color: cyan;
-       font-size: 75px;}
-    
-    .game-center{
-      max-width: 800px;
-      margin: auto;
-      margin-top: 0%;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 20px;
-      border-top: none;
-      border-bottom: none;
-    }
-    
-    .game-tile {
-      background-color: #fff;
-      border: 1px solid #ccc;
-      width: 90%;
-      padding: 20px;
-      height: max-content;
-      text-align: center;
-    }
-    
-    .game-tile img {
-      border-radius: 10px;
-      max-width: 80px;
-      margin: 10px auto;
-      display: block;
-    }
-    
-    .game-tile h2 {
-      font-size: 24px;
-      margin: 10px 0;
-    }
-    
-    .game-tile p {
-      font-size: 14px;
-      margin: 0;
-    }
-    
-    .game-tile a {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 20px;
-      background-color: #007BFF;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    
-    .game-tile a:hover {
-      background-color: #0056b3;
-    }
-    .game-tile-pc {opacity: 0 ;}
-  }
-  </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet">
+    <style>@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+      @media (min-width: 768px) {
+        .background {
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-image: linear-gradient(to bottom, #2D4030, #49684C);
+              z-index: -1;
+          }
+
+          .container {
+                      margin-top: -1in;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: justify;
+                      flex-grow: 1;
+                      justify-content: center;
+                      }
+        h3{
+              align-self: center;
+              font-size: medium;
+              font-family: monospace;
+              margin-top: -1cm;
+              color: #60FFD9;
+          } 
+          .header {
+              text-align: center;
+          }
+          .name {
+              margin-top: 3cm;
+              font-size: xx-large;
+              font-family: 'Maven Pro', sans-serif;
+              color: #97B299;
+              margin: 0 auto;
+              text-align: center;
+              overflow: hidden;
+              white-space: nowrap;
+          }
+          .name::after {
+              opacity: 100;
+              content: '';
+              display: inline-block;
+              vertical-align: middle;
+              width: 2px;
+              height: 1em;
+              margin-left: 4px;
+              background-color: #0B192D;
+              animation: blinkCursor 1s infinite;
+              }
+              .title {
+                  font-size: 30px;
+                  color: #CED7F3;
+                  font-family: myFirstFont;
+              }
+              .button {
+                  display: inline-block;
+                  width: 30%;
+                  height: 30%;
+                  color: #CED7F3;
+                  padding: 10px 20px;
+                  border-radius: 10px;
+                  text-decoration: none;
+                  margin-top: 20px;
+                  font-family: myFirstFont;
+                  border: #2D4030;
+                  font-size: 30px;
+                  border: 1px solid;
+                  transition: background-color 0.3s;
+                  box-shadow: 0px 2px 4px rgba(0, 0, 0, 10);
+              }
+              @font-face {
+                  font-family: myFirstFont;
+                  src: url(NTR-Regular.ttf);
+               }
+              .project-tile {
+                  display: inline-block;
+                  width: 30%;
+                  height: 70vmin;
+                  padding: 10px;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  background-color: #596854;
+                  color: #60FFD9;
+                  border-radius: 10px;
+                  text-align: center;
+                  text-decoration: none;
+                  font-size: xx-large;
+                  cursor: pointer;
+                  margin-right: 10px;
+                  transition: transform .2s;
+                  box-shadow: 0px 2px 4px rgba(0, 0, 0, 100); /* Add shadow */
+              }
+              .goal{
+                  font-size: 28px;  
+                  color: #CED7F3;
+                  font-family: myFirstFont;
+              }
+              .content {
+                  margin-top: 50px;
+                  text-align: center;
+                  color: #CED7F3;
+                  font-family: myFirstFont;
+              }
+              .about-me {
+                  margin-top: 30px;    
+                  font-family: myFirstFont;
+                  font-size: 18px;
+                  word-wrap: break-word;
+                  color: #CED7F3;
+                  text-align: middle;
+                  animation: fade-in2 4s steps(40) 4s 1 normal both
+              }
+          
+              .section-heading {
+                  margin-top: 3cm;
+                  margin-left: 1cm;
+                  align-self: justify;
+                  font-size: xx-large;
+                  font-family: myFirstFont;
+              }
+                    
+          @keyframes blinkCursor {
+          from, to {
+              background-color: transparent;
+          }
+          50% {
+              background-color: #99E6D4;
+          }
+          }
+          
+      }
+      @media (max-width: 800px) {
+          /* Add mobile-specific styles here */
+          .background {
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-image: linear-gradient(to bottom, #2D4030, #49684C);
+              z-index: -1;
+          }
+
+          .container {
+                      margin-top: 9.3in;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: justify;
+                      flex-grow: 1;
+                      justify-content: center;
+                      height: 100vh;}
+          h3{
+              align-self: center;
+              font-size: medium;
+              font-family: monospace;
+              margin-top: -1cm;
+              color: #60FFD9;
+          }
+          .header {
+              text-align: center;
+          }
+          .name {
+              margin-top: 3cm;
+              font-size: xx-large;
+              font-family: 'Maven Pro', sans-serif;
+              color: #97B299;
+              margin: 0 auto;
+              text-align: center;
+              overflow: hidden;
+              white-space: nowrap;
+          }
+          .name::after {
+              opacity: 100;
+              content: '';
+              display: inline-block;
+              vertical-align: middle;
+              width: 2px;
+              height: 1em;
+              margin-left: 4px;
+              background-color: #0B192D;
+              animation: blinkCursor 1s infinite;
+              }
+              .title {
+                  font-size: 30px;
+                  color: #CED7F3;
+                  font-family: myFirstFont;
+              }
+              .button {
+                  display: inline-block;
+                  width: 30%;
+                  height: 30%;
+                  color: #CED7F3;
+                  padding: 10px 20px;
+                  border-radius: 10px;
+                  text-decoration: none;
+                  margin-top: 20px;
+                  font-family: myFirstFont;
+                  border: #2D4030;
+                  font-size: 30px;
+                  border: 1px solid;
+                  transition: background-color 0.3s;
+                  box-shadow: 0px 2px 4px rgba(0, 0, 0, 10);
+              }
+              @font-face {
+                  font-family: myFirstFont;
+                  src: url(NTR-Regular.ttf);
+               }
+              .project-tile {
+                  display: inline-block;
+                  width: 85%;
+                  height: 120vmin;
+                  padding: 10px;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  background-color: #596854;
+                  color: #60FFD9;
+                  border-radius: 10px;
+                  text-align: center;
+                  text-decoration: none;
+                  font-size: xx-large;
+                  cursor: pointer;
+                  margin-right: 10px;
+                  transition: transform .2s;
+                  box-shadow: 0px 2px 4px rgba(0, 0, 0, 100); /* Add shadow */
+              }
+              .content {
+                  margin-top: 50px;
+                  text-align: center;
+                  color: #CED7F3;
+                  font-family: myFirstFont;
+              }
+              .section-heading {
+                  margin-top: 3cm;
+                  margin-left: 1cm;
+                  align-self: justify;
+                  font-size: xx-large;
+                  font-family: myFirstFont;
+              }
+          
+            @keyframes typewriter {
+          from {
+              width: 0;
+          }
+          to {
+              width: 16em;
+          }
+          }
+          
+          @keyframes blinkCursor {
+          from, to {
+              background-color: transparent;
+          }
+          50% {
+              background-color: #99E6D4;
+          }
+          }
+          
+      }</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game-Center</title>
+    <link rel="icon" type="image/x-icon" href="https://www.svgrepo.com/show/439108/color-theory.svg">
 </head>
 <body>
-  <h1>Game Center</h1>
-  <div class="game-center">
-    <div class="game-tile">
-      <h2>Menja</h2>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKPzXKz558UezUVkuju-dPQPXecLmGk1PibMDoWR_6-f3zOpwgCMJE&usqp=CAE&s" alt="Game 1 Thumbnail">
-      <p>Slice blocks, Have fun.</p>
-      <a href="menja.html">Play Now</a>
-    </div>
-    <div class="game-tile">
-      <h2>Neon snake</h2>
-      <img src="https://cdn.vectorstock.com/i/preview-1x/50/56/snake-in-zoo-neon-glow-icon-vector-46245056.webp" alt="Game 2 Thumbnail">
-      <p>embrace the lights...</p>
-      <a href="snake.html">Play Now</a>
-    </div>
-    <div class="game-tile">
-      <h2>A-mazed</h2>
-      <img src="maze.png" alt="Game 3 Thumbnail">
-      <p>Have fun with the amazing maze</p>
-      <a href="maze.htm">Play Now</a>
-    </div>
-  </div>
+    <div class="background"></div>
+    <div class="container">
+      <div id="home"></div>
+            <img src="https://www.svgrepo.com/show/439108/color-theory.svg" alt="Logo" id="logo" style='max-width: 3in; margin-top: 5cm; align-self: center; border-radius: 10px; margin-bottom: 1cm;'>
+        <div  class="header">
+         <h1 id="name" class="name">Game Center</h1>
+         <!-- NAME -->
+         <h2 class="title">Lets Have Fun Here...</h2>
+  
+              
+                    
+        <div class="content">
+          <!-- Software creations -->
+            <div class="projects">
+                <div class="project">
+                    <div class="project-tile">
+                      <h4 class="project-title">Menja</h4>
+                      <h3>Slice blocks, Have fun</h3>
+                      <a class= 'button' href="menja.html">Play!</a>
+                    </div>
+                    <div class="project-tile">
+                      <h4 class="project-title">A-mazin'</h4>
+                      <h3>Solve the Amazing Maze...</h3>
+                      <a href="maze.htm" class = "button">Play</a>
+                     </div>
+                    <div class="project-tile">
+                      <h4 class="project-title">Neon-Snake!</h4>
+                      <h3>Embrace The Darkness</h3>
+                      <a class= 'button' href="snake.html">Play!</a>
+                    </div>
+                    <br></br>
+                </div>
+            </div>
+        </div>
+
 </body>
+<footer style="font-size: 12px; font-family: monospace; color: #FCE4B4; align-items: center; margin-top: 2in;">
+    <p>Built and designed by Utkrishth Srivastava</p>
+    <p>All Rights Reserved</p>
+ </footer>
 </html>
