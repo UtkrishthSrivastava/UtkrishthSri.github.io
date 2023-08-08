@@ -18,7 +18,7 @@
     <title>Utkrishth...</title>
     <link rel="icon" type="image/x-icon" href="https://emojigraph.org/media/apple/man-technologist-medium-skin-tone_1f468-1f3fd-200d-1f4bb.png">
 </head>
-<body>
+<body id="body">
     <div class="background"></div>
     <div class="container">
       <div id="home"></div>
@@ -27,7 +27,27 @@
           <button class="ribbon-button" onclick="scrollToElement('home')">-/Home()</button>
           <button class="ribbon-button" onclick="scrollToElement('About-me')">-/About-me()</button>
           <button class="ribbon-button" onclick="scrollToElement('software-creations')">-/software-creations</button>
-          <a class="ribbon-button" href = "contact.html" class="ribbon-button">-/Contact-Me()</a>      
+          
+<button class="ribbon-button" onclick="togglePopup()">-/Contact-Me</button>
+          <div class="popup-overlay" id="popupOverlay">
+            <div class="popup-container">
+              <span class="popup-close-button" onclick="togglePopup()">&times;</span>
+              <div class="popup-links">
+                <a href="https://www.instagram.com/utkrishth_srivastava">
+                  <img src="Insta-logo.png" alt="Your Photo" style="max-height: 70px;">
+                </a>
+                <a href="https://www.youtube.com/@utkrishthsrivastava">
+                  <img src="https://cdn.icon-icons.com/icons2/1294/PNG/512/2362136-blog-social-video-youtube-youtuber_85522.png" alt="Your Photo" style="max-height: 70px;">
+                </a>
+                <a href="https://github.com/UtkrishthSrivastava">
+                  <img src="https://cdn-icons-png.flaticon.com/256/1322/1322053.png" alt="Your Photo" style="max-height: 70px;">
+                </a>
+                <a href="mailto:srivastavautkrishth@gmail.com">
+                  <img src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjkzMi1uaW5nLTYwLmpwZw.jpg" alt="Your Photo" style="max-height: 70px; border-radius: 10px; margin-top: 2px;">
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
         <div  class="header">
          <h1 id="name" class="name">Hi, Utkrishth here...</h1>
@@ -78,6 +98,16 @@
 </body>
 
 <script>
+function togglePopup() {
+  var overlay = document.getElementById("popupOverlay");
+  var popup = document.querySelector(".popup-container");
+  
+  if (overlay.style.display === "block") {
+    overlay.style.display = "none";
+  } else {
+    overlay.style.display = "block";
+  }
+}
 
 function scrollToElement(elementId) {
             const targetElement = document.getElementById(elementId);

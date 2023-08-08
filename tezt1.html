@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* Your existing styles */
 
+/* Style for the popup overlay */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 1000;
+}
+
+/* Style for the popup container */
+.popup-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+}
+
+/* Style for the close button */
+.popup-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<button class="popup-button" onclick="togglePopup()">Open Popup</button>
+
+<div class="popup-overlay" id="popupOverlay" onclick="togglePopup()">
+  <div class="popup-container" onclick="event.stopPropagation();">
+    <span class="popup-close-button" onclick="togglePopup()">&times;</span>
+    <!-- Your popup content -->
+    <h3>Popup Links</h3>
+    <div class="popup-links">
+      <a href="#" class="popup-link">Link 1</a>
+      <a href="#" class="popup-link">Link 2</a>
+      <a href="#" class="popup-link">Link 3</a>
+    </div>
+  </div>
+</div>
+
+<script>
+function togglePopup() {
+  var overlay = document.getElementById("popupOverlay");
+  
+  if (overlay.style.display === "block") {
+    overlay.style.display = "none";
+  } else {
+    overlay.style.display = "block";
+  }
+}
+
+window.onclick = function(event) {
+  var overlay = document.getElementById("popupOverlay");
+  var popup = document.querySelector(".popup-container");
+  
+  if (overlay.style.display === "block" && event.target === overlay) {
+    togglePopup();
+  }
+}
+</script>
+
+</body>
+</html>

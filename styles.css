@@ -11,6 +11,11 @@
     background-image: linear-gradient(to bottom, #0B192D, #0B192D);
     z-index: -1;
 }
+/* Style for the blurred background */
+.blurred-background {
+    filter: blur(5px);
+  }
+  
 .rounded-image1{
     border-radius: 20px;
 }
@@ -41,6 +46,42 @@
             margin: 5px;
             cursor: pointer;
         }
+        .popup-close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 16px;
+            cursor: pointer;
+          }
+          
+                        .popup-container {
+                            position: fixed;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            background-color: #0d1422;
+                            padding: 20px;
+                            border-radius: 10px;
+                            box-shadow: 0px 4px 8px rgba(0, 0, 0, 100);
+                            z-index: 1001;
+                          }
+                          
+                          /* Style for the links */
+                          .popup-links {
+                            text-align: center;
+                            margin-top: 10px;
+                          }
+                          
+                          .popup-link {
+                            display: block;
+                            margin: 5px 0;
+                            color: #3498db;
+                            text-decoration: none;
+                          }
+                          
+                          .popup-link:hover {
+                            text-decoration: underline;
+                          }
 .container {
     display: flex;
     flex-direction: column;
@@ -364,6 +405,46 @@ animation-play-state: running;
                 margin: 5px;
                 cursor: pointer;
                 }
+                /* Style for the blurred background */
+.blurred-background {
+    filter: blur(5px);
+  }
+  .popup-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+                .popup-container {
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: #0d1422;
+                    padding: 20px;
+                    border-radius: 10px;
+                    box-shadow: 0px 4px 8px rgba(0, 0, 0, 100);
+                    z-index: 1001;
+                  }
+                  
+                  /* Style for the links */
+                  .popup-links {
+                    text-align: center;
+                    margin-top: 10px;
+                  }
+                  
+                  .popup-link {
+                    display: block;
+                    margin: 5px 0;
+                    color: #3498db;
+                    text-decoration: none;
+                  }
+                  
+                  .popup-link:hover {
+                    text-decoration: underline;
+                  }
     .container {
                 margin-top: 18.75in;
                 display: flex;
