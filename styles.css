@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 @media (min-width: 768px) {
     /* Add PC-specific styles here */
-.tree{padding-top: 14in;}
+.tree{padding-top: 20in;}
 .background {
     position: fixed;
     top: 0;
@@ -81,6 +81,23 @@
                           
                           .popup-link:hover {
                             text-decoration: underline;
+                          }
+                          .photo-frame {
+                            border: 5px solid #99E6D4;
+                            width: 400px;
+                            border-radius: 10px;
+                            height: 300px;
+                            margin: 30px auto;
+                            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            overflow: hidden;
+                          }
+                        
+                          img {
+                            max-width: 100%;
+                            max-height: 100%;
                           }
 .container {
     display: flex;
@@ -230,7 +247,7 @@ pg {
 .section-heading {
     margin-top: 3cm;
     margin-right: 1in;
-    align-self: center;
+    align-self: justify;
     font-size: 30px;
     font-family: myFirstFont;
 }
@@ -361,7 +378,7 @@ animation-play-state: running;
 }
 @media (max-width: 800px) {
     /* Add mobile-specific styles here */
-    .tree{padding-top: 100vmin;}
+    .tree{padding-top: 225vmin;}
     .background {
         position: fixed;
         top: 0;
@@ -376,6 +393,23 @@ animation-play-state: running;
         width: 90%;
         height: max-content;
     }
+    .photo-frame {
+        border: 5px solid #99E6D4;
+        width: 90%;
+        border-radius: 10px;
+        height: 300px;
+        margin: 30px auto;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 100);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+    
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
     
             .ribbon {
                 position: fixed;
