@@ -1,7 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 @media (min-width: 768px) {
     /* Add PC-specific styles here */
-.tree{padding-top: 20in;}
+
+.tree{padding-top: 26.5in;}
 .background {
     position: fixed;
     top: 0;
@@ -15,11 +16,12 @@
 .blurred-background {
     filter: blur(5px);
   }
-  
+
 .rounded-image1{
     border-radius: 20px;
 }
-
+.card-container {display: none;
+}
         .ribbon {
             position: fixed;
             width: 100%;
@@ -174,7 +176,7 @@ animation: blinkCursor 1s infinite;
     src: url(NTR-Regular.ttf);
  }
 .project-tile {
-    display: inline-block;
+    display:inline-block ;
     width: 2.5in;
     height: 3.5in;
     padding: 10px;
@@ -320,6 +322,30 @@ pg {
     vertical-align: middle;
     animation: neon-glow 1s infinite;
 }
+.image-container {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .image-container img {
+    max-width: 30%;
+    margin-right: 10px;
+    border-radius: 10px;
+  }
+  
+  .output {
+    flex: 1;
+    margin-left: 10px;
+    padding-left: 10px; /* Add padding to create a gap between image and text */
+    color: #00ffb3c5;
+    font-size: x-large;
+    font-family: myFirstFont;
+  }
+  
 /* Animation */
 @keyframes neon-glow {
     0%, 100% {
@@ -378,7 +404,7 @@ animation-play-state: running;
 }
 @media (max-width: 800px) {
     /* Add mobile-specific styles here */
-    .tree{padding-top: 225vmin;}
+    .tree{padding-top: 39in;}
     .background {
         position: fixed;
         top: 0;
@@ -410,7 +436,59 @@ animation-play-state: running;
         max-width: 100%;
         max-height: 100%;
       }
-    
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #1a1a1a;
+    }
+
+    .card-container {
+        width: 90%;
+        margin-left: 5%;
+        height: 350px;
+        perspective: 1000px;
+        margin-bottom: 50px;
+    }
+
+    .card {
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        animation: flipCard 6s infinite;
+    }
+
+    .face {
+        position: absolute;
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+        background-color: #174e72;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: monospace;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        backface-visibility: hidden;
+    }
+
+    .back {
+        transform: rotateY(180deg);
+        background-color: #643e88;
+    }
+
+    @keyframes flipCard {
+        0%, 100% {
+            transform: rotateY(0);
+        }
+        50% {
+            transform: rotateY(180deg);
+        }
+    }
             .ribbon {
                 position: fixed;
                 width: 100%;
@@ -609,12 +687,27 @@ animation-play-state: running;
         border-left: 6px solid transparent;
         border-right: 6px solid transparent;
         border-bottom: 12px solid #00FFFF; /* Neon Cyan color, you can change this to any other neon color */
-
         font-size: 18px;
         vertical-align: middle;
         align-self: justify;
         animation: neon-glow 1s infinite;
     }
+    .image-container {
+        display: inline-block;
+        margin: 10px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+      .image-container img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        border-radius: 10px;
+      }
+      .output{
+        margin-top: 1cm; color: #00ffb3c5; font-size: large; font-family: myFirstFont;
+      }
     /* Animation */
     @keyframes neon-glow {
         0%, 100% {

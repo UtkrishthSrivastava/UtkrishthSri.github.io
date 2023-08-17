@@ -32,6 +32,7 @@
           <div class="popup-overlay" id="popupOverlay">
             <div class="popup-container">
               <span class="popup-close-button" onclick="togglePopup()">&times;</span>
+              <h6 style="font-family: monospace; font-size:small; margin-right : 30% ">Contact-Me</h6>
               <div class="popup-links">
                 <a href="https://www.instagram.com/utkrishth_srivastava">
                   <img src="Insta-logo.png" alt="Your Photo" style="max-height: 70px;">
@@ -63,6 +64,12 @@
                 <pg>
                     I am Utkrishth Srivastava, a high school junior currently studying at RAMPUS. I am passionate about programming, particularly in Python and HTML/CSS. Despite financial constraints and challenging circumstances, I am actively pursuing my education through CS50x and free MIT coursework. In addition to coding and studying, I enjoy playing sports such as cricket, football, and badminton. I also have a keen interest in video games like Pokemon, Zelda, Animal Crossing, Call of Duty, and Minecraft.
                     <h2>My Skills:</h2>
+                    <div class="card-container">
+                      <div class="card">
+                          <div class="face">Python<img src="pngwing-python.png" style="max-width: 30px; margin-right: 3px;"> and JS<img src="pngwing-js.png" style="max-width: 30px; margin-right: 3px;"></div>
+                          <div class="face back">HTML<img src="pngwing-html.png" style="max-width: 30px; margin-right: 3px;"> and CSS<img src="pngwing-css.png" style="max-width: 30px; margin-right: 3px;"></div>
+                      </div>
+                  </div>
                     <ul class="neon-triangle-list">
                         <li>Proficient in Python programming language.</li>
                         <li>Competent in web development using HTML and CSS.</li>
@@ -94,6 +101,9 @@
                 </div>
 
             </div>
+        <h3 class="section-heading">-/Updates()</h3>
+        <div class="output" id="output-container"></div>
+        <a href="life-journey.html" style="color: cyan;">My Life's journey</a>
         <!-- CERTIFICATES -->
         <h3 id="software-creations" class="section-heading">-/Certificates()</h3>
         <div id="Certificates" class="photo-frame">
@@ -111,6 +121,41 @@
 </body>
 
 <script>
+const outputContainer = document.getElementById("output-container");
+
+const fileURL = "life.txt";
+const xhr = new XMLHttpRequest();
+xhr.open("GET", fileURL, true);
+xhr.onreadystatechange = function() {
+  if (xhr.readyState === 4 && xhr.status === 200) {
+    const lines = xhr.responseText.trim().split('\n');
+
+    if (lines.length > 0) {
+      const firstLine = lines[0];
+      const parts = firstLine.split('|');
+      if (parts.length === 2) {
+        const text = parts[0].trim();
+        const imageSrc = parts[1].trim();
+
+        const imageElement = document.createElement("img");
+        imageElement.src = imageSrc;
+        imageElement.alt = text;
+
+        const textElement = document.createElement("p");
+        textElement.textContent = text;
+
+        const container = document.createElement("div");
+        container.className = "image-container";
+        container.appendChild(imageElement);
+        container.appendChild(textElement);
+
+        outputContainer.appendChild(container);
+      }
+    }
+  }
+};
+xhr.send();
+
 function togglePopup() {
   var overlay = document.getElementById("popupOverlay");
   var popup = document.querySelector(".popup-container");
@@ -165,6 +210,25 @@ function scrollToElement(elementId) {
     customNextBtn.addEventListener("click", nextPhoto);
 
     updatePhoto();
+//Adding scroll fadein animation
+const fadeObject = document.querySelector('fade-in-object');
+
+const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 1, // Trigger when at least 50% of the element is visible
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            fadeObject.style.opacity = 1; // Fade in the object
+            observer.unobserve(fadeObject); // Stop observing once faded in
+        }
+    });
+}, options);
+
+observer.observe(fadeObject);
 </script>
 <footer style="font-size: 12px; font-family: monospace; color: aqua; align-items: center; margin-top: 2in;">
     <p>Built and designed by Utkrishth Srivastava</p>
