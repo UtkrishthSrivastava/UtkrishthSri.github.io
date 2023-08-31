@@ -1,9 +1,19 @@
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 @media (min-width: 768px) {
     /* Add PC-specific styles here */
-
-.tree{padding-top: 26.5in;}
-.background {
+    .background_image{
+        width: 100%;
+        height: 300px;
+        background: #0B192E;
+        background-image: url(https://images.hdqwalls.com/download/interstellar-gargantua-u4-2560x1440.jpg);
+        background-size: cover;
+        background-position: center;
+        margin-top: 27in;
+      }
+    .background_image h1 {font-size: 5em; color: beige; font-weight: bold; left: 0; width: 100%; height: 300px;
+    background-image: linear-gradient(to top, #0B192E, #0B192D, rgba(0, 0, 0, 0));}
+    .tree {margin-left: 40%; margin-bottom: 10cm; padding-bottom: 10cm;;}
+    .background {
     position: fixed;
     top: 0;
     left: 0;
@@ -121,11 +131,12 @@
 }
 
 .name {
-    margin-top: 3cm;
+    margin-top: 2cm;
+    margin-left: 35%;
     font-size: 50px;
     font-family: 'Maven Pro', sans-serif;
     color: #60FFD9;
-    margin: 0 auto;
+    margin-bottom: 0px;
     text-align: center;
     overflow: hidden;
     white-space: nowrap;
@@ -142,6 +153,8 @@ vertical-align: middle;
 width: 2px;
 height: 1em;
 margin-left: 4px;
+margin-right: 43%;
+margin-bottom: 0px;
 background-color: #0B192D;
 animation: blinkCursor 1s infinite;
 }
@@ -150,9 +163,10 @@ animation: blinkCursor 1s infinite;
 
 .title {
     font-size: 25px;
+    margin-top: 0px;
     color: #CED7F3;
     font-family: myFirstFont;
-    margin-left: 4.75in;
+    margin-left: 4.97in;
     text-align: center;
     opacity: 0;
     animation: typewriter 4s steps(40) 1s 1 normal both, fadeIn 1s 5s ease-in-out forwards;
