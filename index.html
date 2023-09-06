@@ -22,14 +22,25 @@
     <div class="background"></div>
     <div class="container">
       <div id="home"></div>
-      <section class="background_image"><h1><img src="download.png" alt="Logo" id="logo" class="tree"></h1></section>
+      <section class="background_image">
+        <img src="download.png" class="tree">
+        <h1>
+          <div id="logo">
+            <img src="icons\crest4-removebg-preview.png" draggable="false" />
+            <img src="icons\crest3-removebg-preview.png" draggable="false" />
+            <img src="icons\crest2-removebg-preview.png" draggable="false" />
+            <img src="icons\crest1-removebg-preview.png" draggable="false" />
+            <img src="icons\crest-main-removebg-preview.png" draggable="false" />
+          </div>
+        </h1>
+      </section>
       
       <div class="ribbon">
+        <button class="ribbon-button" onclick="togglePopup()">-/Contact-Me</button>
           <button class="ribbon-button" onclick="scrollToElement('home')">-/Home()</button>
           <button class="ribbon-button" onclick="scrollToElement('About-me')">-/About-me()</button>
           <button class="ribbon-button" onclick="scrollToElement('software-creations')">-/software-creations</button>
           
-<button class="ribbon-button" onclick="togglePopup()">-/Contact-Me</button>
           <div class="popup-overlay" id="popupOverlay">
             <div class="popup-container">
               <span class="popup-close-button" onclick="togglePopup()">&times;</span>
@@ -104,7 +115,7 @@
             </div>
         <h3 class="section-heading">-/Updates()</h3>
         <div class="output" id="output-container"></div>
-        <a href="life-journey.html" style="color: cyan;">My Life's journey</a>
+        <a href="life-journey.html" style="color: cyan; margin-left: 10%">My Life's journey</a>
         <!-- CERTIFICATES -->
         <h3 id="software-creations" class="section-heading">-/Certificates()</h3>
         <div id="Certificates" class="photo-frame">
@@ -122,6 +133,65 @@
 </body>
 
 <script>
+//logo
+const logo = document.getElementById("logo"),
+    images = logo.querySelectorAll("img");
+
+const getActive = () => document.body.dataset.active === "true",
+    setActiveTo = active => document.body.dataset.active = active;
+
+const shift = (image, index, rangeX, rangeY) => {
+const active = getActive();
+      
+const translationIntensity = active ? 24 : 4,
+      maxTranslation = translationIntensity * (index + 1),
+      currentTranslation = `${maxTranslation * rangeX}% ${maxTranslation * rangeY}%`;
+
+const scale = active ? 1 + (index * 0.4) : 1;
+
+image.animate({ 
+  translate: currentTranslation, 
+  scale 
+}, { duration: 750, fill: "forwards", easing: "ease" });
+}
+
+const shiftAll = (images, rangeX, rangeY) => 
+images.forEach((image, index) => shift(image, index, rangeX, rangeY));
+
+const shiftLogo = (e, images) => {  
+const rect = logo.getBoundingClientRect(),
+      radius = 1000;
+
+const centerX = rect.left + (rect.width / 2),
+      centerY = rect.top + (rect.height / 2);
+
+const rangeX = (e.clientX - centerX) / radius,
+      rangeY = (e.clientY - centerY) / radius;
+
+shiftAll(images, rangeX, rangeY);
+}
+
+const resetLogo = () => {
+setActiveTo(false);
+shiftAll(images, 0.4, -0.7);
+}
+
+window.onmousemove = e => shiftLogo(e, images);
+
+document.body.onmouseleave = () => {
+if(!getActive()) resetLogo();
+}
+
+window.onmousedown = e => {
+setActiveTo(true);
+shiftLogo(e, images);
+}
+
+window.onmouseup = e => resetLogo();
+
+resetLogo();
+
+
 const outputContainer = document.getElementById("output-container");
 
 const fileURL = "life.txt";
