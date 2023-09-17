@@ -41,7 +41,7 @@
           <button class="ribbon-button" onclick="scrollToElement('About-me')">-/About-me()</button>
           <button class="ribbon-button" onclick="scrollToElement('software-creations')">-/software-creations</button>
           
-          <div class="popup-overlay" id="popupOverlay">
+          <div class="popup-overlay" id="popupOverlay"style="display: none;">
             <div class="popup-container">
               <span class="popup-close-button" onclick="togglePopup()">&times;</span>
               <h6 style="font-family: monospace; font-size:small; margin-right : 30% ">Contact-Me</h6>
@@ -227,15 +227,15 @@ xhr.onreadystatechange = function() {
 };
 xhr.send();
 
-function togglePopup() {
-  var overlay = document.getElementById("popupOverlay");
-  var popup = document.querySelector(".popup-container");
-  
-  if (overlay.style.display === "block") {
-    overlay.style.display = "none";
-  } else {
-    overlay.style.display = "block";
-  }
+  function togglePopup() {
+    var overlay = document.getElementById("popupOverlay");
+    var popup = document.querySelector(".popup-container");
+
+    if (overlay.style.display === "block") {
+        overlay.style.display = "none";
+    } else {
+        overlay.style.display = "block";
+    }
 }
 
 function scrollToElement(elementId) {
